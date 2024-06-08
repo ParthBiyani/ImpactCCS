@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Integration</title>
+    <script>(function(){var js,fs,d=document,id="tars-widget-script",b="https://tars-file-upload.s3.amazonaws.com/bulb/";if(!d.getElementById(id)){js=d.createElement("script");js.id=id;js.type="text/javascript";js.src=b+"js/widget.js";fs=d.getElementsByTagName("script")[0];fs.parentNode.insertBefore(js,fs)}})();window.tarsSettings = {"convid": "P56VM4", "href": "https://chatbot.hellotars.com/conv/P56VM4"};</script>
+</head>
+<body>
+    <button id="chatbotButton">Chat with us!</button>
+    <div id="chatbotContainer" style="display:none;">
+        <!-- The chatbot iframe will be inserted here -->
+    </div>
+
+    <script>
+        document.getElementById('chatbotButton').addEventListener('click', function() {
+            var container = document.getElementById('chatbotContainer');
+            container.innerHTML = '<iframe src="https://chatbot.hellotars.com/conv/P56VM4" style="width:100%; height:500px; border:none;"></iframe>';
+            container.style.display = 'block'; // Show the chatbot iframe
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.btn_card
+{
+    background-color: #604f97c1;
+    border: none;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 15px;
+    border-color: black;
+    text-decoration: none;
+    color: white;
+    font-weight: 20;
+    padding: 25px 70px;
+}
+.btn_invoice{
+    position: relative;
+    left: 20%;
+    top: 20%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.sales-grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "sn"
+    "si"
+    "sb";
+}
+.sales-navbar{
+    grid-area: sn;
+    display: grid;
+    grid-template-areas:"l l l l l h";
+    padding: 20px;
+    font-size: 30px;
+    color: #604f97;
+    background-color: #f6fbff;
+}
+.sales-invoice{
+    grid-area: si;
+    display: grid;
+    grid-template-areas:"il il il ir";
+    padding: 20px;
+}
+.sales-billing{
+    grid-area: sb;
+    display: grid;
+    grid-template-areas:"bl bl bl br";
+    padding: 20px;
+    padding: 5% 0px;
+    margin-left: 2%;
+}
+.logo{
+    grid-area: l;
+}
+.home{
+    grid-area: h;
+}
+.invoice-left{
+    grid-area: il;
+    font-size: 50px;
+    color: #604f97;
+}
+.invoice-right{
+    grid-area: ir;
+    background-image: url("icons/invoice.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 550px;
+    margin-left: 200px;
+}
+.billing-left{
+    grid-area: bl;
+    background-color: #9d90ec;
+    padding-top: 20px;
+}
+.billing-right{
+    grid-area: br;
+    font-size: 25px;
+    background-color: #f8f7f5;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+ol li{
+    color: black;
+    font-weight: 10;
+    background-color: white;
+    border: solid ;
+    border-width: 10px;
+}
+.add-more{
+    position: relative;
+    left: 0%;
+}
+.total{
+    background-color: #9d90ec;
+    margin: 50px 30px 50px 0px;
+}
+@media (max-width: 576px) {
+    .sales-grid-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1000px) {
+    .invoice-right{
+        display: none;
+    }
+}
+@media (max-width: 1180px) {
+    .btn_invoice{
+        top: 5%;
+    }
+}
+@media (max-width: 1300px) {
+    .sales-billing{
+        grid-template-areas:
+        "bl"
+        "br";
+    }
+    .sales-navbar{
+        grid-template-areas:
+        "l"
+        "h";
+        width: 100%;
+    }
+}

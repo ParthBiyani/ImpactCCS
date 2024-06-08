@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Sold Items</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #604f97;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: white;
+            color: black;
+            border: 20px;
+            border-color: black;
+        }
+        .record-container {
+            margin-top: 30px;
+        }
+        .record {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="form-container">
+        <div class="first"><i class="fa-solid fa-arrow-up" style="color:#ff9490;"></i>UP BUSINESS<br></div>
+        <h2>RECORD SOLD ITEMS</h2>
+        <form id="soldItemForm">
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" id="itemName" name="itemName" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity Sold</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price per Item</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date Sold</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Record Sale</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="record-container" id="recordContainer">
+        <h2>Sold Items Records:</h2>
+        <!-- Records will be displayed here -->
+    </div>
+
+    <script>
+        document.getElementById('soldItemForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const itemName = document.getElementById('itemName').value;
+            const quantity = document.getElementById('quantity').value;
+            const price = document.getElementById('price').value;
+            const date = document.getElementById('date').value;
+
+            // Create record element
+            const recordContainer = document.getElementById('recordContainer');
+            const recordElement = document.createElement('div');
+            recordElement.classList.add('record');
+            recordElement.innerHTML = `
+                <strong>Item Name:</strong> ${itemName}<br>
+                <strong>Quantity Sold:</strong> ${quantity}<br>
+                <strong>Price per Item:</strong> $${price}<br>
+                <strong>Date Sold:</strong> ${date}
+            `;
+
+            // Append record to the container
+            recordContainer.appendChild(recordElement);
+
+            // Clear form
+            document.getElementById('soldItemForm').reset();
+        });
+    </script>
+</body>
+</html>

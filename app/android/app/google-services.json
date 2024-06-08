@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "401458481611",
+    "project_id": "upbusiness-22f74",
+    "storage_bucket": "upbusiness-22f74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401458481611:android:6c1c6edb9cb8fca5908e4e",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401458481611-5vi0d9ehjdrptfqnepflq8cnnacnu7v4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUowj6CTrdxTUPGruYMFq61h7CAEjQ8lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401458481611-5vi0d9ehjdrptfqnepflq8cnnacnu7v4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
